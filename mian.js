@@ -108,49 +108,19 @@ window.addEventListener("scroll", function() {
 
 
 
-// ====================== ScrollReveal Setup ======================
+
 const sr = ScrollReveal({
-    distance: '20px',       
-    duration: 800,
-    easing: 'ease-out',
-    reset: true            
-});
+    origin : "top",
+    distance :'60px',
+    duration :'2500',
+    delay :'300',
+    reset :true
+})
 
-// ====================== Navbar ======================
-sr.reveal('#navbar', { origin: 'top', distance: '10px', duration: 600 });
-
-// ====================== Home Section ======================
-sr.reveal('#home h1', { origin: 'left', delay: 100 });
-sr.reveal('#home p', { origin: 'bottom', delay: 200 });
-sr.reveal('#home .btn', { origin: 'bottom', interval: 150, delay: 300 });
-sr.reveal('#home img', { origin: 'right', delay: 400 });
-sr.reveal('#home .animate-movingY', { origin: 'bottom', distance: '10px', interval: 300, duration: 1200 });
-
-// ====================== About Section ======================
-sr.reveal('#about h2', { origin: 'top', delay: 100 });
-sr.reveal('#about p', { origin: 'bottom', delay: 200 });
-sr.reveal('#about img', { origin: 'left', delay: 300 });
-sr.reveal('#about .space-y-5 h3, #about .space-y-5 p', { origin: 'right', interval: 150, delay: 400 });
-
-// ====================== Popular Section ======================
-sr.reveal('#popular h2', { origin: 'top', delay: 100 });
-sr.reveal('#popular p', { origin: 'bottom', delay: 200 });
-sr.reveal('.popular_card', { origin: 'bottom', distance: '20px', interval: 150, delay: 300 });
-
-// ====================== Review Section ======================
-const swiperSlides = document.querySelectorAll('.swiper-slide');
-swiperSlides.forEach((slide, index) => {
-    sr.reveal(slide, {
-        origin: 'bottom',
-        distance: '20px',
-        delay: index * 150
-    });
-});
-
-// ====================== Footer ======================
-sr.reveal('footer h3, footer p, footer a, footer input, footer button', {
-    origin: 'bottom',
-    distance: '20px',
-    interval: 100,
-    delay: 100
-});
+sr.reveal('.home_data, .about_top,.popular_top,.review_top,.review_swiper,.footer_icon,.footer_content,.copy_right,.footer_email')
+sr.reveal('.home_img',{delay:500,scale:0.5})
+sr.reveal('.services_card, .popular_card',{interval:100})
+sr.reveal('.about_leaf',{delay:1000,origin:'right'})
+sr.reveal('.about_item_1-content,.about_item_2-img',{origin:'right'})
+sr.reveal('.about_item_2-content,.about_item_1-img',{origin:'left'})
+sr.reveal('.review_leaf, .footer_floral',{delay:1000, origin:'left'})
